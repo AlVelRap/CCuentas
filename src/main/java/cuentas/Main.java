@@ -1,7 +1,20 @@
 package cuentas;
 
+/**
+ * <p>Este clase es la clase principal.</p>
+ * 
+ * @author Alberto Velazquez Rapado
+ * @version 1.0 26/02/2022
+ * 
+ */
 public class Main {
 
+    /**
+     * <p>Este clase es la clase principal.</p>
+     * @param args
+     * @author Alberto Velazquez Rapado
+     * @version 1.0 26/02/2022
+     */
     public static void main(String[] args) {
         operativa_cuenta(2.0f);
     }

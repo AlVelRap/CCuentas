@@ -1,16 +1,34 @@
 package cuentas;
 
+/**
+ * <p>Este clase se encarga de gestionar los metodos y atributos de los objetos
+ * cuenta. Permitiendo leer y modificar los atributos, obtener el estado de una 
+ * cuenta, realizar un ingreso o hacer una retirada de efectivo.</p>
+ * 
+ * @author Alberto Velazquez Rapado
+ * @version 1.0 26/02/2022
+ * 
+ */
 public class CCuenta {
 
     /**
-     * @return the nombre
+     * <p>Este método permite recibir el atributo nombre</p>
+     * 
+     * @return String con el atibuto nombre
+     * 
+     * @author Alberto Velazquez Rapado
+     * @version 1.0 26/02/2022
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * <p>Este método permite recibir el atributo nombre</p>
+     * 
+     * @param nombre String con nuevo valor de nombre
+     * @author Alberto Velazquez Rapado
+     * @version 1.0 26/02/2022
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -64,10 +82,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     *
+     */
     public CCuenta()
     {
     }
 
+    /**
+     *
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -75,11 +103,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     *
+     * @return
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -87,6 +124,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
